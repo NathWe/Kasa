@@ -14,8 +14,11 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
+      <NavigationLink to="/home">
         <LogoImage src={logo} alt="logo kasa" />
+        </NavigationLink>
       </LogoContainer>
+
       <NavigationContainer>
         <NavigationList>
           <NavigationItem>
@@ -24,7 +27,7 @@ const Header: React.FC = () => {
             </NavigationLink>
           </NavigationItem>
           <NavigationItem>
-            <NavigationLink to="/home" className="underline">
+            <NavigationLink to="/apropos" className="underline">
               À Propos
             </NavigationLink>
           </NavigationItem>
