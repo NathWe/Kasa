@@ -7,13 +7,16 @@ import {
 
 interface BanniereProps {
   image: string;
+  showTitle?: boolean;
 }
 
-const Banniere: React.FC<BanniereProps> = ({ image }) => {
+const Banniere: React.FC<BanniereProps> = ({ image, showTitle = true }) => {
   return (
     <BanniereContainer>
       <BanniereImage src={image} alt="" />
-      <BanniereTitle>Chez vous, partout et ailleurs</BanniereTitle>
+      {showTitle && (
+        <BanniereTitle>Chez vous, partout et ailleurs</BanniereTitle>
+      )}
     </BanniereContainer>
   );
 };

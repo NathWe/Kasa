@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Création d'un composant-styled pour la div .banniere
 export const BanniereContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -22,21 +21,23 @@ export const BanniereContainer = styled.div`
 
     h1 {
       font-size: 37px;
-      width: 80%;
+      width: 60%;
     }
   }
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
+  @media screen and (min-width: 370px) and (max-width: 768px) {
     width: 90vw;
+    height: 111px;
     border-radius: 10px;
+    margin: 20px;
 
     img {
       border-radius: 10px;
     }
 
     h1 {
-      font-size: 29px;
-      width: 80%;
+      font-size: 24px;
+      width: 60%;
     }
   }
 
@@ -55,7 +56,6 @@ export const BanniereContainer = styled.div`
   }
 `;
 
-// Création d'un composant-styled pour l'image
 export const BanniereImage = styled.img`
   object-fit: cover;
   border-radius: 25px;
@@ -64,10 +64,12 @@ export const BanniereImage = styled.img`
   height: 100%;
 `;
 
-// Création d'un composant-styled pour le titre h1
 export const BanniereTitle = styled.h1`
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 700;
   position: absolute;
   color: white;
+
+  @media screen and (min-width: 370px) and (max-width: 768px) {
+left: 20px;
 `;

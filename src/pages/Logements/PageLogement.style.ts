@@ -5,6 +5,18 @@ export const FicheLogementContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 90vw;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 100%;
+  }
 `;
 
 export const NavigationContainer = styled.div`
@@ -13,15 +25,40 @@ export const NavigationContainer = styled.div`
   align-items: center;
   position: relative;
   width: 90vw;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 100%;
+  }
 `;
 
 export const TitreLogementContainer = styled.div`
   margin-top: 2rem;
+  margin-bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 374px) {
+    flex-direction: column;
+  }
 `;
 
 export const TitreNomContainer = styled.div`
@@ -30,17 +67,59 @@ export const TitreNomContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 100%;
+  }
 `;
 
 export const TitreH2 = styled.h2`
   font-size: 36px;
   font-weight: 500;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: 18px;
+  }
 `;
 
 export const TitreP = styled.p`
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: black;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 `;
 
 export const NomLogementContainer = styled.div`
@@ -48,6 +127,24 @@ export const NomLogementContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
 `;
 
 export const HebergerContainer = styled.div`
@@ -55,6 +152,18 @@ export const HebergerContainer = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 50%;
+  }
 `;
 
 export const HebergerH3 = styled.h3`
@@ -64,6 +173,11 @@ export const HebergerH3 = styled.h3`
   display: flex;
   flex-direction: column;
   padding-right: 1rem;
+  white-space: pre-line;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 12px;
+  }
 `;
 
 export const HebergerImg = styled.img`
@@ -71,6 +185,11 @@ export const HebergerImg = styled.img`
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
+
+  @media only screen and (max-width: 992px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 export const NameRatingContainer = styled.div`
@@ -78,6 +197,10 @@ export const NameRatingContainer = styled.div`
   flex-flow: row nowrap;
   font-size: 2.5rem;
   margin-top: 1rem;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
 `;
 
 export const DescriptEquipContainer = styled.div`
@@ -87,6 +210,24 @@ export const DescriptEquipContainer = styled.div`
   width: 100%;
   gap: 2rem;
   margin-top: 2rem;
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  @media only screen and (max-width: 374px) {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
 `;
 
 export const DescriptionContainer = styled.div`

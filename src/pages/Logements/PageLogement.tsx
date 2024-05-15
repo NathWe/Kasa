@@ -19,37 +19,20 @@ import {
   DescriptEquipContainer,
   DescriptionContainer,
   EquipementsContainer,
-  DescriptionP,
-  EquipementsUl,
-  EquipementsLi,
   TagEvaluationContainer,
   TagsContainer,
 } from "./PageLogement.style";
-import { getId } from "../../data/services";
+import { getId, Logement } from "../../data/services";
 
-interface Logement {
-  id: string;
-  title: string;
-  location: string;
-  pictures: string[];
-  tags: string[];
-  host: {
-    name: string;
-    picture: string;
-  };
-  rating: number;
-  description: string;
-  equipments: string[];
-}
+function Pagelogement() {
+  const params = useParams();
+  const logementId = params.logementId || ""; // Utilisation d'une valeur par défaut
+  const ficheLogement: Logement | undefined = getId(logementId);
 
-function Pagelogements() {
-  const { logementId }: { logementId ?: string } = useParams();
-  const ficheLogement = getId(logementId);
-
-if (!ficheLogement) {
-  // Gérer le cas où aucun logement n'est trouvé avec l'ID spécifié
-  return <Navigate to="/page404"></Navigate>;
-}
+  if (!ficheLogement) {
+    // Gérer le cas où aucun logement n'est trouvé avec l'ID spécifié
+    return <Navigate to="/page404" />;
+  }
 
   return (
     <FicheLogementContainer>
@@ -70,7 +53,14 @@ if (!ficheLogement) {
         </TitreNomContainer>
         <NomLogementContainer>
           <HebergerContainer>
-            <HebergerH3>{ficheLogement.host.name}</HebergerH3>
+            <HebergerH3>
+              {ficheLogement.host.name.split(" ").map((part, index) => (
+                <React.Fragment key={index}>
+                  {part}
+                  <br />
+                </React.Fragment>
+              ))}
+            </HebergerH3>
             <HebergerImg
               src={ficheLogement.host.picture}
               alt={ficheLogement.host.picture}
@@ -93,4 +83,4 @@ if (!ficheLogement) {
   );
 }
 
-export default Pagelogements;
+export default Pagelogement;

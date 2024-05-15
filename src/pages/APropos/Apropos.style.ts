@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MainBanner = styled.div`
   display: flex;
@@ -6,18 +6,43 @@ export const MainBanner = styled.div`
   align-items: center;
   width: 60vw;
 
-  /* Media queries */
+  @media screen and (min-width: 993px) and (max-width: 1220px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 374px) {
+    width: 100%;
+  }
 `;
 
 export const About = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem;
-  padding-top: 31px;
   width: 100%;
 
   /* Media queries */
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    width: 90%;
+    .about {
+      padding-top: 19px;
+    }
+  }
+  @media only screen and (max-width: 374px) {
+    .main-banner {
+      width: 90%;
+    }
+    .about {
+      padding-top: 19px;
+    }
+  }
 `;
 
 export const DropdownContainer = styled.div`
@@ -27,7 +52,6 @@ export const DropdownContainer = styled.div`
   margin-bottom: 2rem;
   width: 100%;
 `;
-
 
 export const DropdownText = styled.p`
   height: auto;
@@ -41,4 +65,3 @@ export const DropdownText = styled.p`
   letter-spacing: 0em;
   text-align: left;
 `;
-

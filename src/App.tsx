@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import pages
 import Home from "./pages/Home/home";
+import PageLogement from "./pages/Logements/PageLogement";
 import Page404 from "./pages/Page404/Page404";
 import Apropos from "./pages/APropos/Apropos";
 //import components
@@ -14,8 +15,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/logement/:logementId" element={<PageLogement />} />
           <Route path="/apropos" element={<Apropos />} />
           {/* si ne correspond à aucun chemin (path)*/}
           <Route path="*" element={<Page404 />} />

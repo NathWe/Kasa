@@ -33,7 +33,7 @@ export const NavigationContainer = styled.div`
     position: absolute;
     width: 46px;
     height: 79px;
-    top: 180px;
+    top: 150px;
   }
 
   .precedent {
@@ -64,6 +64,16 @@ export const NavigationContainer = styled.div`
 
     @media only screen and (max-width: 374px) {
       padding-top: 72%;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .precedent,
+    .suivant {
+      width: 11px;
+      height: 19px;
+      position: absolute;
+      top: 100px;
     }
   }
 `;

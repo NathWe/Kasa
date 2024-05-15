@@ -6,9 +6,12 @@ export const MainContainer = styled.div`
   align-items: center;
   width: 60vw;
 
-  @media screen and (min-width: 769px) and (max-width: 1220px) {
+  @media screen and (min-width: 375px) and (max-width: 1220px) {
     width: 90vw;
   }
+  @media screen and (max-width: 374px) {
+    width: 100%;
+    
 `;
 
 export const GalleryContainer = styled.div`
@@ -27,7 +30,11 @@ export const GalleryContainer = styled.div`
     screen and (min-width: 375px) and (max-width: 768px),
     screen and (max-width: 374px) {
     width: 90vw;
-    padding: 0;
+    padding: 0px;
     background: white;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin: 0rem 2rem; /* Appliquer la marge spécifique au format 375 pixels */
   }
 `;

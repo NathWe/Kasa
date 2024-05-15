@@ -5,17 +5,24 @@ export interface Logement {
   id: string;
   title: string;
   cover: string;
+  pictures: string[];
+  location: string;
+  tags: string[];
+  host: {
+    name: string;
+    picture: string;
+  };
+  rating: number;
+  description: string;
+  equipments: string[];
 }
-
-// Assertion de type pour les données JSON
-const logementsList: { id: string; title: string; cover: string }[] = logements;
 
 // Récupération du fichier JSON et création d'un tableau pour chaque logement
 export function getLogements(): Logement[] {
-  return logementsList.map((logement) => ({
-    id: logement.id,
-    title: logement.title,
-    cover: logement.cover,
+  // Convertir les données de logements.json au format Logement[]
+  return logements.map((logement) => ({
+    ...logement,
+    rating: parseFloat(logement.rating), // Convertir rating en nombre
   }));
 }
 

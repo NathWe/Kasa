@@ -14,7 +14,7 @@ export const GalleryContainer = styled.div`
     opacity: 0.5;
   }
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
+  @media screen and (min-width: 370px) and (max-width: 768px) {
     width: 335px;
     height: 255px;
     border-radius: 10px;
@@ -35,6 +35,7 @@ export const Overlay = styled.div`
   margin-top: -101.5%;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
