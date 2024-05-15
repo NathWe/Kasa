@@ -211,19 +211,16 @@ export const DescriptEquipContainer = styled.div`
   gap: 2rem;
   margin-top: 2rem;
 
-  @media screen and (min-width: 769px) and (max-width: 992px) {
-    flex-direction: column;
-    margin-top: 0;
-    gap: 0;
+  ul {
+    background-color: #f6f6f6;
+    color: black;
+    list-style-type: none;
+    padding-top: 10px;
+    margin: 0;
+    padding-left: 20px;
   }
 
-  @media screen and (min-width: 375px) and (max-width: 768px) {
-    flex-direction: column;
-    margin-top: 0;
-    gap: 0;
-  }
-
-  @media only screen and (max-width: 374px) {
+  @media only screen and (max-width: 992px) {
     flex-direction: column;
     margin-top: 0;
     gap: 0;
@@ -260,7 +257,6 @@ export const DescriptionP = styled.p`
 export const EquipementsUl = styled.ul`
   background-color: #f6f6f6;
   font-size: 18px;
-  color: #ff6060;
   height: auto;
   padding: 30px 10px;
   font-weight: 400;
@@ -270,7 +266,7 @@ export const EquipementsUl = styled.ul`
 
 export const EquipementsLi = styled.li`
   font-weight: 400;
-  padding: 2px;
+  padding: 0;
   margin-left: 20px;
 `;
 

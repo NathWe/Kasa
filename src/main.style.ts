@@ -19,8 +19,3 @@ export const ResetStyles = styled.div`
   margin: 0;
   box-sizing: border-box;
 `;
-
-// Liste styles
-export const ListStyles = styled.li`
-  list-style-type: none;
-`;

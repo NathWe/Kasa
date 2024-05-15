@@ -10,7 +10,6 @@ export const TitreDropdown = styled.div`
   padding: 0 18px;
   border-radius: 5px;
 
-
   h3 {
     color: white;
     font-size: 18px;
@@ -26,13 +25,12 @@ export const TitreDropdown = styled.div`
     margin-right: 10px;
     cursor: pointer;
   }
-
 `;
 
 export const DropdownText = styled.p`
   color: black;
   background-color: #f6f6f6;
   padding: 10px;
-  border-radius: 0 0 5px 5px; 
-  margin: 0; 
+  border-radius: 0 0 5px 5px;
+  margin: 0;
 `;
