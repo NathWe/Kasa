@@ -11,6 +11,7 @@ export const PageStyles = styled.div`
   align-items: center;
   position: relative;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 `;
 
 // Reset styles
